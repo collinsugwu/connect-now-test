@@ -19,18 +19,15 @@ export default defineComponent({
 
 <template>
   <div>
-    <router-link
-      :to="to"
-      class="nav-link"
-    >
+    <router-link :to="to" class="nav-link">
       <slot />
     </router-link>
   </div>
 </template>
 
 <style scoped>
-  .nav-link {
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
+.nav-link {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
 </style>

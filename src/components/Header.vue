@@ -21,7 +21,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-  .header {
-    padding: 3rem 2rem 2rem 1rem;
-  }
+.header {
+  padding: 3rem 2rem 2rem 1rem;
+}
 </style>

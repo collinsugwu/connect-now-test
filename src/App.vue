@@ -15,17 +15,17 @@ export default defineComponent({
 </script>
 
 <style>
-  body {
-    height: 100%;
-    background: linear-gradient( #081221, #03080f);
-    color: #ffffff;
-  }
-  a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  a:hover{
-    text-decoration: none;
-    color: #ffffff;
-  }
+body {
+  height: 100%;
+  background: linear-gradient(#081221, #03080f);
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
 </style>

@@ -7,7 +7,7 @@ export default {
     moviesData: Array
   },
 
-  setup(props) {
+  setup() {
     const perpage = ref(10)
     const currentPage = ref(1)
     const row = ref(100)

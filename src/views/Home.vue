@@ -12,19 +12,19 @@ export default defineComponent({
     const store = useStore()
 
     const filterName = (e: PointerEvent) => {
-      const value = e.target.value
+      const value = (e.target as HTMLInputElement).value
       const movies = store.getters.filterName(value)
       moviesData.value = movies
     }
 
     const minNumber = (e: PointerEvent) => {
-      const value = e.target.value
+      const value = (e.target as HTMLInputElement).value
       const movies = store.getters.filterNumber(value)
       moviesData.value = movies
     }
 
     const order = (e: PointerEvent) => {
-      const value = e.target.value
+      const value = (e.target as HTMLInputElement).value
       const movies = store.getters.filterOrderBy(value)
       moviesData.value = movies
     }

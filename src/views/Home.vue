@@ -38,12 +38,14 @@ export default defineComponent({
     onMounted(() => {
       return new Promise((resolve, reject) => {
         getMovies()
-          .then(response => {
-            resolve(true)
-            moviesData.value = response[0]
-            store.commit('SET_MOVIES', moviesData.value)
-            loading.value = false
-          })
+          .then(response =>
+            setTimeout(() => {
+              resolve(true)
+              moviesData.value = response[0]
+              store.commit('SET_MOVIES', moviesData.value)
+              loading.value = false
+            }, 2000)
+          )
           .catch(error => {
             reject(error)
           })

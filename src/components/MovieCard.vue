@@ -1,17 +1,14 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, toRefs } from 'vue'
 import { sanitizeDate, sanitizeRate } from '../helpers/sanitize'
 
 export default {
+  components: {},
   props: {
     moviesData: Array
   },
 
-  setup() {
-    const perpage = ref(10)
-    const currentPage = ref(1)
-    const row = ref(100)
-
+  setup(props: any['moviesData']) {
     const cleanRate = (rate: number) => {
       return sanitizeRate(rate)
     }
@@ -23,9 +20,6 @@ export default {
     return {
       cleanRate,
       cleanDate,
-      row,
-      perpage,
-      currentPage
     }
   }
 }
@@ -59,11 +53,7 @@ export default {
         </div>
       </div>
     </div>
-    <b-pagination
-      v-model="currentPage"
-      :total-rows="rows"
-      :per-page="perPage"
-    ></b-pagination>
+    <div>defineComponent</div>
   </div>
 </template>
 

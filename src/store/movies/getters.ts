@@ -1,3 +1,4 @@
+import { sanitizeDate } from '@/helpers/sanitize'
 import { GetterTree } from 'vuex'
 import { RootState } from '../types'
 import MovieModel from './MovieModel'
@@ -29,7 +30,7 @@ export const getters: GetterTree<MovieState, RootState> = {
       case 'date':
         return state.movies
           .slice()
-          .sort((a, b) => b.first_release_date - a.first_release_date)
+          .sort((a, b) =>  b.first_release_date - a.first_release_date)
         break
       case 'rating':
         return state.movies.slice().sort((a, b) => b.rating - a.rating)
